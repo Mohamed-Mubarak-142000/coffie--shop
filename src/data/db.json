@@ -1,0 +1,122 @@
+{
+  "coffees": [
+    {
+      "id": 1,
+      "name": "قهوة عربية كلاسيكية",
+      "nameEn": "Classic Arabic Coffee",
+      "price": 45,
+      "roast": "medium",
+      "type": "arabic",
+      "size": "250g",
+      "description": "قهوة عربية أصيلة مع الهيل والزعفران، محمصة على الطريقة التقليدية لنكهة غنية ومميزة",
+      "descriptionEn": "Authentic Arabic coffee with cardamom and saffron, roasted in the traditional way for a rich and distinctive flavor",
+      "ingredients": ["بن عربي", "هيل", "زعفران", "قرنفل"],
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/7487217/pexels-photo-7487217.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "إسبريسو فاخر",
+      "nameEn": "Premium Espresso",
+      "price": 55,
+      "roast": "dark",
+      "type": "espresso",
+      "size": "200g",
+      "description": "إسبريسو فاخر من حبوب البن المختارة يدويًا، محمص بدرجة داكنة لإبراز النكهة الكاملة",
+      "descriptionEn": "Premium espresso from hand-selected coffee beans, dark roasted to bring out the full flavor",
+      "ingredients": ["بن روبوستا", "بن أرابيكا"],
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/4829083/pexels-photo-4829083.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "لاتيه بالفانيلا",
+      "nameEn": "Vanilla Latte",
+      "price": 35,
+      "roast": "medium",
+      "type": "latte",
+      "size": "230g",
+      "description": "مزيج متوازن من القهوة المحمصة متوسطة الدرجة مع نكهة الفانيلا الطبيعية",
+      "descriptionEn": "A balanced blend of medium roast coffee with natural vanilla flavor",
+      "ingredients": ["بن أرابيكا", "فانيلا طبيعية", "حليب"],
+      "rating": 4.4,
+      "image": "https://images.pexels.com/photos/4109744/pexels-photo-4109744.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "كولد برو بالكراميل",
+      "nameEn": "Caramel Cold Brew",
+      "price": 60,
+      "roast": "light",
+      "type": "coldbrew",
+      "size": "300g",
+      "description": "قهوة باردة منقوعة لمدة 24 ساعة، مع نكهة الكراميل الغنية لتجربة منعشة",
+      "descriptionEn": "Cold coffee steeped for 24 hours, with rich caramel flavor for a refreshing experience",
+      "ingredients": ["بن أرابيكا", "شراب الكراميل"],
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/2074122/pexels-photo-2074122.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "قهوة تركية تقليدية",
+      "nameEn": "Traditional Turkish Coffee",
+      "price": 42,
+      "roast": "medium",
+      "type": "turkish",
+      "size": "250g",
+      "description": "قهوة تركية مطحونة ناعمة جدًا، محضرة على الرمل الساخن بالطريقة التقليدية",
+      "descriptionEn": "Very finely ground Turkish coffee, prepared on hot sand in the traditional way",
+      "ingredients": ["بن أرابيكا", "هيل"],
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/11762591/pexels-photo-11762591.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "موكا بالشوكولاتة",
+      "nameEn": "Chocolate Mocha",
+      "price": 50,
+      "roast": "dark",
+      "type": "mocha",
+      "size": "230g",
+      "description": "مزيج فاخر من الإسبريسو الداكن والشوكولاتة البلجيكية الفاخرة",
+      "descriptionEn": "A luxurious blend of dark espresso and premium Belgian chocolate",
+      "ingredients": ["بن أرابيكا", "شوكولاتة بلجيكية", "حليب"],
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/5947067/pexels-photo-5947067.jpeg"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "تحميص القهوة",
+      "nameEn": "Coffee Roasting",
+      "description": "نقدم خدمة تحميص القهوة بدرجات مختلفة حسب طلبك، بطرق تقليدية وحديثة",
+      "descriptionEn": "We offer coffee roasting service at different degrees according to your request, using traditional and modern methods",
+      "image": "https://images.pexels.com/photos/2074122/pexels-photo-2074122.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "توصيل القهوة",
+      "nameEn": "Coffee Delivery",
+      "description": "خدمة توصيل سريعة لجميع أنحاء المدينة، مع ضمان وصول القهوة طازجة وبحالة ممتازة",
+      "descriptionEn": "Fast delivery service to all parts of the city, with a guarantee that the coffee will arrive fresh and in excellent condition",
+      "image": "https://images.pexels.com/photos/7658355/pexels-photo-7658355.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "اشتراكات شهرية",
+      "nameEn": "Monthly Subscriptions",
+      "description": "اشتراكات شهرية لتصلك القهوة المفضلة لديك بانتظام، مع خصومات خاصة للمشتركين",
+      "descriptionEn": "Monthly subscriptions to receive your favorite coffee regularly, with special discounts for subscribers",
+      "image": "https://images.pexels.com/photos/4109748/pexels-photo-4109748.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "ورش عمل وتدريب",
+      "nameEn": "Workshops and Training",
+      "description": "ورش عمل لتعلم فنون تحضير القهوة المختلفة، مع مدربين محترفين في مجال القهوة",
+      "descriptionEn": "Workshops to learn the art of preparing different coffees, with professional trainers in the field of coffee",
+      "image": "https://images.pexels.com/photos/7658365/pexels-photo-7658365.jpeg"
+    }
+  ]
+}
