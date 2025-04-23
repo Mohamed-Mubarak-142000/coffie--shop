@@ -6,15 +6,50 @@ const About = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.2,
       },
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+  const directions = [
+    { x: -100, y: 0 }, // من اليسار
+    { x: 0, y: -100 }, // من فوق
+    { x: 0, y: 100 }, // من تحت
+    { x: 100, y: 0 }, // من اليمين
+  ];
+
+  // دالة ترجع variant حسب الاتجاه
+  const getItemVariants = (index: number) => {
+    const direction = directions[index % directions.length];
+    return {
+      hidden: { opacity: 0, x: direction.x, y: direction.y },
+      visible: { opacity: 1, x: 0, y: 0, transition: { duration: 0.8 } },
+    };
   };
+
+  // البيانات الخاصة بالكروت
+  const cards = [
+    {
+      icon: <Coffee size={28} className="text-accent-primary" />,
+      title: "حبوب مختارة بعناية",
+      description: "نختار أفضل حبوب البن من مصادر مستدامة حول العالم",
+    },
+    {
+      icon: <Truck size={28} className="text-accent-primary" />,
+      title: "توصيل سريع",
+      description: "نوصل منتجاتنا لباب منزلك بكل عناية وسرعة",
+    },
+    {
+      icon: <Users size={28} className="text-accent-primary" />,
+      title: "خبراء في القهوة",
+      description: "فريقنا من الخبراء المتخصصين في تحميص وتحضير القهوة",
+    },
+    {
+      icon: <Coffee size={28} className="text-accent-primary" />,
+      title: "تحميص يومي طازج",
+      description: "نحمص القهوة يوميًا لضمان النكهة المثالية والطازجة",
+    },
+  ];
 
   return (
     <section className="py-20 bg-coffee-cream">
@@ -39,68 +74,24 @@ const About = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
-          <motion.div
-            variants={itemVariants}
-            className="bg-white p-6 rounded-lg shadow-md text-center"
-          >
-            <div className="bg-accent-secondary/10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-              <Coffee size={28} className="text-accent-primary" />
-            </div>
-            <h3 className="font-heading font-bold text-xl text-coffee-dark mb-2">
-              حبوب مختارة بعناية
-            </h3>
-            <p className="text-coffee-medium">
-              نختار أفضل حبوب البن من مصادر مستدامة حول العالم
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={itemVariants}
-            className="bg-white p-6 rounded-lg shadow-md text-center"
-          >
-            <div className="bg-accent-secondary/10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-              <Truck size={28} className="text-accent-primary" />
-            </div>
-            <h3 className="font-heading font-bold text-xl text-coffee-dark mb-2">
-              توصيل سريع
-            </h3>
-            <p className="text-coffee-medium">
-              نوصل منتجاتنا لباب منزلك بكل عناية وسرعة
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={itemVariants}
-            className="bg-white p-6 rounded-lg shadow-md text-center"
-          >
-            <div className="bg-accent-secondary/10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-              <Users size={28} className="text-accent-primary" />
-            </div>
-            <h3 className="font-heading font-bold text-xl text-coffee-dark mb-2">
-              خبراء في القهوة
-            </h3>
-            <p className="text-coffee-medium">
-              فريقنا من الخبراء المتخصصين في تحميص وتحضير القهوة
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={itemVariants}
-            className="bg-white p-6 rounded-lg shadow-md text-center"
-          >
-            <div className="bg-accent-secondary/10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-              <Coffee size={28} className="text-accent-primary" />
-            </div>
-            <h3 className="font-heading font-bold text-xl text-coffee-dark mb-2">
-              تحميص يومي طازج
-            </h3>
-            <p className="text-coffee-medium">
-              نحمص القهوة يوميًا لضمان النكهة المثالية والطازجة
-            </p>
-          </motion.div>
+          {cards.map((card, index) => (
+            <motion.div
+              key={index}
+              variants={getItemVariants(index)}
+              className="bg-white p-6 text-center"
+            >
+              <div className="bg-accent-secondary/10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                {card.icon}
+              </div>
+              <h3 className="font-heading font-bold text-xl text-coffee-dark mb-2">
+                {card.title}
+              </h3>
+              <p className="text-coffee-medium">{card.description}</p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

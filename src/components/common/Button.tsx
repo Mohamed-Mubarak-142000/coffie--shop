@@ -80,7 +80,9 @@ const Button = ({
         />
       )}
 
-      <span className="relative z-10">{children}</span>
+      <div className="relative z-10 flex flex-row items-center gap-1 p-1">
+        {children}
+      </div>
     </motion.button>
   );
 };
